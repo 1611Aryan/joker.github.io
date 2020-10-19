@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        #clip {
+            position:fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            clip-path: circle(900px at center center);
+        }
+
+        #clip video {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        #content {
+            position:relative;
+            margin-top:200vh;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-size: 2rem;
+        }
+        ::-webkit-scrollbar{
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clip">
+        <video id="joker" src="vid/videoplayback.mp4" autoplay muted ></video>
+    </div>
+    
+    <div id="content">
+        <h2>Legen wait for it......wait for it .....Dary!!!!!!</h2>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed exercitationem reprehenderit magni voluptate,
+            nisi necessitatibus facilis. Aliquid, tempore! Perspiciatis ab a atque voluptatum doloremque incidunt
+            aliquam odio mollitia labore nulla.
+            Dolorum autem facere ad voluptatem exercitationem minus recusandae? Eligendi, velit ea molestias recusandae
+            vero consequatur quaerat cum culpa maxime, tempora ipsam minus voluptas architecto consequuntur? Aut sequi
+            soluta placeat odio.
+            Fuga beatae veritatis odit similique vel neque inventore necessitatibus, dolores nesciunt fugiat sed animi
+            rem ipsa tempora! Quo, facilis corrupti eveniet et veritatis ab ullam sapiente expedita? Tempore, illo
+            voluptates.
+            Omnis alias quidem sint labore veritatis distinctio vel placeat sed fugiat iste eius, dicta inventore rerum
+            velit perspiciatis est aperiam maxime tenetur, atque dolorem iusto dolorum! Enim praesentium voluptas id.
+            Qui perferendis odio sapiente dolorum sunt eligendi, neque nisi sint sed vero officiis deleniti. Id quo
+            facilis vel porro fugit sapiente odit rem. Nam ex temporibus blanditiis cumque, eius impedit!
+            Sapiente illum deserunt quo non pariatur sint itaque quibusdam dolorem vitae voluptate, culpa consequatur
+            eligendi rem maxime ab temporibus. Incidunt rerum ipsum iusto quia nesciunt, asperiores neque mollitia
+            consequatur velit.
+            Vitae autem corrupti, dicta, quasi mollitia rem porro sed assumenda, labore debitis ipsam rerum alias quas
+            reiciendis asperiores. Hic, deserunt aperiam laborum ab eos in alias ut unde magni nisi!
+        </p>
+    </div>
+    <script>
+        window.addEventListener('scroll',function(){
+            let pos=(900-window.scrollY);
+            console.log(pos);
+            document.getElementById("clip").style.clipPath= "circle("+ pos +"px at center center)";
+        });
+    </script>
+</body>
+
+</html>
